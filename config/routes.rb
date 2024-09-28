@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get("/", { :controller => "misc", :action => "homepage" })
 
   get("/movies", { :controller => "movies", :action => "show_movies" })
-  get("/show", { :controller => "movies", :action => "show" })
+  get("/details", { :controller => "movies", :action => "show" })
 
   get("/directors", { :controller => "directors", :action => "show_directors" })
   get("directors/:the_id", { :controller => "directors", :action => "show" })
