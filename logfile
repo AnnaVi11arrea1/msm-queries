@@ -74,3 +74,9 @@
 2024-09-28 19:48:31.218 UTC [90506] STATEMENT:  SELECT "movies".* FROM "movies" WHERE "movies"."actors" = $1
 2024-09-28 19:48:31.262 UTC [90506] ERROR:  column movies.actors does not exist at character 39
 2024-09-28 19:48:31.262 UTC [90506] STATEMENT:  SELECT "movies".* FROM "movies" WHERE "movies"."actors" = $1 /* loading for inspect */ LIMIT $2
+2024-09-28 20:58:10.835 UTC [7689] LOG:  checkpoint starting: time
+2024-09-28 20:58:12.147 UTC [7689] LOG:  checkpoint complete: wrote 15 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.305 s, sync=0.004 s, total=1.312 s; sync files=14, longest=0.002 s, average=0.001 s; distance=22 kB, estimate=4682 kB; lsn=0/27AD0F8, redo lsn=0/27AD0C0
+2024-09-28 21:03:10.149 UTC [7689] LOG:  checkpoint starting: time
+2024-09-28 21:03:10.559 UTC [7689] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.403 s, sync=0.002 s, total=0.410 s; sync files=6, longest=0.002 s, average=0.001 s; distance=15 kB, estimate=4215 kB; lsn=0/27B1010, redo lsn=0/27B0FD8
+2024-09-28 21:13:10.759 UTC [7689] LOG:  checkpoint starting: time
+2024-09-28 21:13:11.970 UTC [7689] LOG:  checkpoint complete: wrote 14 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.205 s, sync=0.003 s, total=1.212 s; sync files=13, longest=0.002 s, average=0.001 s; distance=23 kB, estimate=3796 kB; lsn=0/27B6C20, redo lsn=0/27B6BE8

@@ -1,0 +1,8 @@
+<h1>Eldest Director</h1>
+
+<div>
+<% oldest = Director.all.order({ :dob => :asc }).at(0) %>
+
+<div> The oldest director in our database right now is <a href="/directors/<%= oldest.id %>"> <%= oldest.name %></a>, born on <%= oldest.dob %>
+
+</div>

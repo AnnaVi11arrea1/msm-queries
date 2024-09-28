@@ -1,29 +1,32 @@
 <h1>Movie #<%= @the_movie.id %> details</h2>
 
+<a href="/movies">Go back</a>
+<hr>
+
 <dl>
   <dt>Title</dt>
-  <dd><%= @a_movie.title %></dd>
+  <dd><%= @the_movie.title %></dd>
 
   <dt>Year</dt>
-  <dd><%= @a_movie.year %></dd>
+  <dd><%= @the_movie.year %></dd>
 
   <dt>Duration</dt>
-  <dd><%= @a_movie.duration %></dd>
+  <dd><%= @the_movie.duration %></dd>
 
   <dt>Description</dt>
-  <dd><%= @a_movie.description %></dd>
+  <dd><%= @the_movie.description %></dd>
 
   <dt>Image</dt>
   <dd>
-    <img src="<%= @a_movie.image %>" width="200"></dd>
+    <img src="<%= @the_movie.image %>" width="200"></dd>
 
   <dt>Director</dt>
-  <dd><%= @a_movie.director_id %>
-  <% matching_records =  Director.where({ :id => @a_movie.director_id }) %>
+  <dd><%= @the_movie.director_id %>
+  <% matching_records =  Director.where({ :id => @the_movie.director_id }) %>
 
   <% the_director = matching_records.at(0) %>
 
-  <% the_director.name %>
+  <%= the_director.name %>
   </dd>
 
   
@@ -34,3 +37,4 @@
   <dt>Updated at</dt>
   <dd><%= @the_movie.updated_at %></dd>
 </dl>
+<hr>
